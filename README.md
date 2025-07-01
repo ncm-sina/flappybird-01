@@ -1,4 +1,4 @@
-**detailed readme.html** is located at /public_html/readme.html you should download the whole project or clone it and then once you run the project using xampp or similar tool (setting public_html as website root) then you can go to localhost/flappybird.com/readme.html
+**detailed readme.html** is located at `/public_html/readme.html` you should download the whole project or clone it and then once you run the project using xampp or similar tool (setting public_html as website root) then you can go to `localhost/flappybird.com/readme.html`
 
 this project was a university project for course "game design and development".
 
