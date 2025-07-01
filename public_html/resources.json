@@ -1,0 +1,234 @@
+{
+    "assets":{
+        "sprites":[
+            {
+                "id": 1,
+                "name": "one",
+                "src": "/assets/sprites/1.png"
+            },
+            {
+                "id": 2,
+                "name": "two",
+                "src": "/assets/sprites/2.png"
+            },
+            {
+                "id": 3,
+                "name": "three",
+                "src": "/assets/sprites/3.png"
+            },
+            {
+                "id": 4,
+                "name": "four",
+                "src": "/assets/sprites/4.png"
+            },
+            {
+                "id": 5,
+                "name": "five",
+                "src": "/assets/sprites/5.png"
+            },
+            {
+                "id": 6,
+                "name": "six",
+                "src": "/assets/sprites/6.png"
+            },
+            {
+                "id": 7,
+                "name": "seven",
+                "src": "/assets/sprites/7.png"
+            },
+            {
+                "id": 8,
+                "name": "eight",
+                "src": "/assets/sprites/8.png"
+            },
+            {
+                "id": 9,
+                "name": "nine",
+                "src": "/assets/sprites/9.png"
+            },
+            {
+                "id": 10,
+                "name": "zero",
+                "src": "/assets/sprites/0.png"
+            },
+            {
+                "id": 11,
+                "name": "background-day",
+                "src": "/assets/sprites/background-day.png"
+            },
+            {
+                "id": 12,
+                "name": "background-night",
+                "src": "/assets/sprites/background-night.png"
+            },
+            {
+                "id": 13,
+                "name": "base",
+                "src": "/assets/sprites/base.png"
+            },
+            {
+                "id": 14,
+                "name": "bluebird-downflap",
+                "src": "/assets/sprites/bluebird-downflap.png"
+            },
+            {
+                "id": 15,
+                "name": "bluebird-midflap",
+                "src": "/assets/sprites/bluebird-midflap.png"
+            },
+            {
+                "id": 16,
+                "name": "bluebird-upflap",
+                "src": "/assets/sprites/bluebird-upflap.png"
+            },
+            {
+                "id": 17,
+                "name": "gameover",
+                "src": "/assets/sprites/gameover.png"
+            },
+            {
+                "id": 18,
+                "name": "message",
+                "src": "/assets/sprites/message.png"
+            },
+            {
+                "id": 19,
+                "name": "pipe-green",
+                "src": "/assets/sprites/pipe-green.png"
+            },
+            {
+                "id": 20,
+                "name": "pipe-red",
+                "src": "/assets/sprites/pipe-red.png"
+            },
+            {
+                "id": 21,
+                "name": "redbird-downflip",
+                "src": "/assets/sprites/redbird-downflap.png"
+            },
+            {
+                "id": 22,
+                "name": "redbird-midflip",
+                "src": "/assets/sprites/redbird-midflap.png"
+            },
+            {
+                "id": 23,
+                "name": "redbird-upflip",
+                "src": "/assets/sprites/redbird-upflap.png"
+            },
+            {
+                "id": 24,
+                "name": "yellowbird-downflip",
+                "src": "/assets/sprites/yellowbird-downflap.png"
+            },
+            {
+                "id": 25,
+                "name": "yellowbird-midflip",
+                "src": "/assets/sprites/yellowbird-midflap.png"
+            },
+            {
+                "id": 26,
+                "name": "yellowbird-upflip",
+                "src": "/assets/sprites/yellowbird-upflap.png"
+            },
+            {
+                "id": 27,
+                "name": "sound-on-off",
+                "src": "/assets/sprites/sound-on-off.jfif"
+            },
+            {
+                "id": 28,
+                "name": "pipe-green-reversed",
+                "src": "/assets/sprites/pipe-green-reversed.png"
+            },
+            {
+                "id": 29,
+                "name": "pipe-red-reversed",
+                "src": "/assets/sprites/pipe-red-reversed.png"
+            },
+            {
+                "id": 30,
+                "name": "background2-day",
+                "src": "/assets/sprites/background2-day.webp"
+            }
+        ],
+        "audio":[
+            {
+                "id": 50,
+                "name": "die",
+                "src":[
+                    "/assets/audio/die.ogg",
+                    "/assets/audio/die.wav"
+                ],
+                "volume": 1
+            },
+            {
+                "id": 51,
+                "name": "hit",
+                "src":[
+                    "/assets/audio/hit.ogg",
+                    "/assets/audio/hit.wav"
+                ],
+                "volume": 1
+            },
+            {
+                "id": 52,
+                "name": "point",
+                "src":[
+                    "/assets/audio/point.ogg",
+                    "/assets/audio/point.wav"
+                ],
+                "volume": 1
+            },
+            {
+                "id": 53,
+                "name": "swoosh",
+                "src":[
+                    "/assets/audio/swoosh.ogg",
+                    "/assets/audio/swoosh.wav"
+                ],
+                "volume": 1
+            },
+            {
+                "id": 54,
+                "name": "wing",
+                "src":[
+                    "/assets/audio/wing.ogg",
+                    "/assets/audio/wing.wav"
+                ],
+                "volume": 1
+            },
+            {
+                "id": 55,
+                "name": "background-music-1",
+                "src":[
+                    "/assets/audio/chill-with-birds.mp3"
+                ],
+                "volume": 1
+            },
+            {
+                "id": 56,
+                "name": "background-music-2",
+                "src":[
+                    "/assets/audio/birds-and-piano.mp3"
+                ],
+                "volume": 1
+            }
+        ]
+    },
+    "scenes":[
+        {
+            "name": "__PreloadAssets",
+            "src": "/js/scenes/__PreloadAssets.js",
+            "properties": {},
+            "childrenJSON": [
+            ]
+        },
+        {
+            "name": "GameMenu",
+            "src": "/js/scenes/GameMenu.js",
+            "properties": {},
+            "childrenJSON": []
+        }
+    ]
+}

@@ -1,0 +1,1535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief description of your page">
+    <title>Your Page Title</title>
+    <style>
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+ :root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+}
+
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+dfn {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+  -ms-overflow-style: scrollbar;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #6c757d;
+  text-align: left;
+  caption-side: bottom;
+}
+
+th {
+  text-align: inherit;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+small,
+.small {
+  font-size: 80%;
+  font-weight: 400;
+}
+
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 80%;
+  color: #6c757d;
+}
+
+.blockquote-footer::before {
+  content: "\2014 \00A0";
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #6c757d;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+code {
+  font-size: 87.5%;
+  color: #e83e8c;
+  word-break: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  font-size: 87.5%;
+  color: #fff;
+  background-color: #212529;
+  border-radius: 0.2rem;
+}
+
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: 700;
+}
+
+pre {
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
+
+.pre-scrollable {
+  max-height: 340px;
+  overflow-y: scroll;
+}
+    </style>
+    <style>
+.jush { color: black; }
+.jush-htm_com, .jush-com, .jush-com_code, .jush-one, .jush-php_doc, .jush-php_com, .jush-php_one, .jush-js_one, .jush-js_doc { color: gray; }
+.jush-php, .jush-php_new, .jush-php_fun { color: #000033; background-color: #FFF0F0; }
+.jush-php_quo, .jush-quo, .jush-quo_one, .jush-php_eot, .jush-apo, .jush-sql_apo, .jush-sqlite_apo, .jush-sql_quo, .jush-sql_eot { color: green; }
+.jush-php_apo { color: #009F00; }
+.jush-php_quo_var, .jush-php_var, .jush-sql_var { font-style: italic; }
+.jush-php_apo .jush-php_quo_var, .jush-php_apo .jush-php_var { font-style: normal; }
+.jush-php_halt2 { background-color: white; color: black; }
+.jush-tag_css, .jush-att_css .jush-att_quo, .jush-att_css .jush-att_apo, .jush-att_css .jush-att_val { color: black; background-color: #FFFFE0; }
+.jush-tag_js, .jush-att_js .jush-att_quo, .jush-att_js .jush-att_apo, .jush-att_js .jush-att_val, .jush-css_js { color: black; background-color: #F0F0FF; }
+.jush-tag, .jush-xml_tag { color: navy; }
+.jush-att, .jush-xml_att, .jush-att_js, .jush-att_css, .jush-att_http { color: teal; }
+.jush-att_quo, .jush-att_apo, .jush-att_val { color: purple; }
+.jush-ent { color: purple; }
+.jush-js_reg { color: navy; }
+.jush-php_sql .jush-php_quo, .jush-php_sql .jush-php_apo,
+.jush-php_sqlite .jush-php_quo, .jush-php_sqlite .jush-php_apo,
+.jush-php_pgsql .jush-php_quo, .jush-php_pgsql .jush-php_apo,
+.jush-php_mssql .jush-php_quo, .jush-php_mssql .jush-php_apo,
+.jush-php_oracle .jush-php_quo, .jush-php_oracle .jush-php_apo
+{ background-color: #FFBBB0; }
+.jush-bac, .jush-php_bac, .jush-bra, .jush-mssql_bra, .jush-sqlite_quo { color: red; }
+.jush-num, .jush-clr { color: #007F7F; }
+
+.jush a { color: navy; }
+.jush-sql a, .jush-sql_code a, .jush-sqlite a, .jush-pgsql a, .jush-mssql a, .jush-oracle a { font-weight: bold; }
+.jush-php_sql .jush-php_quo a, .jush-php_sql .jush-php_apo a { font-weight: normal; }
+.jush-tag a, .jush-att a, .jush-apo a, .jush-quo a, .jush-php_apo a, .jush-php_quo a, .jush-php_eot2 a { color: inherit; color: expression(parentNode.currentStyle.color); }
+a.jush-custom:link, a.jush-custom:visited { font-weight: normal; color: inherit; color: expression(parentNode.currentStyle.color); }
+
+    </style>
+    <style>
+        :root{
+            --background-gray: #666;
+            --background-light-gray:#ccd;
+            --background-white: #f0f0ff;
+            --border-color:#333;
+            --inline-code-bg: #aaa;
+            --inline-code-color: #113;
+        }
+        body, html{
+            background-color: var(--background-gray);
+            width: 100vw !important;
+            overflow-x: hidden;
+        }
+
+        .container{
+            width: 900px;
+            margin: 10px auto 0 auto;
+        }
+
+        .page{
+            position: relative;
+            background-color: var(--background-white);
+            box-shadow: 0 0 5px;
+            border-radius: 5px;
+            padding: 3em 1.5em 2em 1.5em;
+            margin: 10px auto;
+            min-height: 1200px;
+            max-height: 1500px;
+        }
+
+        .page-controller{
+            position: fixed;
+            left: 0;
+            top:0;
+            height: 40px;
+            background-color: var(--background-white);
+            width: 100%;
+            box-shadow: 0 0 5px;
+            z-index: 10000;
+        }
+        .page-controller .container{
+            margin: 5px auto;
+            width: 150px;
+        }
+        .page-controller #currentPage{
+            width:50px;
+
+        }
+
+        .h1{
+            border-bottom: 1px solid var(--border-color);
+        }
+        .folder-structure{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .folder-structure li{
+            list-style-type: none;
+        }
+
+        .folder-structure .folder-structure > li:before{
+            content: '-- '
+        }
+        .folder-structure .folder-structure .folder-structure > li:before{
+            content: '---- '
+        }
+        .folder-structure .folder-structure .folder-structure .folder-structure > li:before{
+            content: '------ '
+        }
+        .folder-structure .folder-structure .folder-structure .folder-structure .folder-structure > li:before{
+            content: '-------- '
+        }
+        .folder-structure .folder-structure .folder-structure .folder-structure .folder-structure .folder-structure > li:before{
+            content: '---------- '
+        }
+        .folder-icon{
+            background-image: url(./images/google-folder-icon-0.jpg);
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 0 0 0 0;
+            position: relative;
+            top: 4px;
+        }
+        .file-icon{
+            background-image: url(./images/png-file-icon-6.jpg);
+            background-size: contain;
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            margin: 0 0 0 0;
+            position: relative;
+            top: 4px;
+        }
+        .inline-code{
+            background-color: var(--inline-code-bg);
+            color: var(--inline-code-color);
+            padding: 0px 2px 1px 2px;
+            border-radius: 4px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+
+        .inline-code a{
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        code{
+            display: inline-block;
+            background-color: var(--background-light-gray);
+            width: 100%;
+            border-radius: 5px;;
+            padding: 10px;
+            margin: 0 0 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="page-container">
+            <section class="page">
+                <h1 class="h1">Documentation</h1>
+                <h2>Project Description</h2>
+                <p>Implement Flappy Bird game similar to flappybird.io (you can check live game here: <a href="http://flappybird.great-site.net">flappybird.great-site.net</a>.</p>
+                <h2>Tools Used</h2>
+                <p>Plain javascript mostly + bootstrap and a little bit of jQuery</p>
+                <h2>Design Details</h2>
+                <p>I tried to create a very simple game engine along the way and created the game using that game engine. It was inspired by GoDot (which could be used for learning game development course instead of pure javascript btw)</p>
+                <p>
+                    So the Idea is that we have the game as objects nesting objects. And objects usually extend from multiple layers of base classes. Similar to DOM
+                    For example we have a scene named `GameScene` its class that inherits from `Scene` Class and inside that scene we have an object which can have other objects inside it.
+                    Like for example a the FlappyBirdCharacter has multiple children inside it like FlappySprite, Collisions etc
+                </p>
+                <p>
+                    Another important thing to point out is that objects inside the game are generated automatically based on childrenJSON defined on parent `Node`. For example a Scene like GameScene has multiple nested objects inside it and they could have their own children.
+                    the object initiations are done automatically using game engine from those childrenJSON arrays. those arrays contains json objects defining name and type of the element (Node) that game engine should create along with properties assosiated with that element (Node) and its childrenJSON which would be populated and generated and initialized too.
+                </p>
+                <p>
+                    So most of the logic regarding drawing objects of different type or handling them is pre written inside code folder and we use them by defining array of childrenJSON inside the scene.
+                    But we can also write our own customized Node (element) inside `scripts` which can have multiple children inside it by default or have custom codes for handling different logic and more complex logic and then it can be used as normal default objects defined inside core folder.
+                    This way we can add custom Nodes without having to edit the core folder of the game engine.
+                    Some examples: ` <a href="">FlappyBirdCharacter.js</a> `
+                </p>
+            </section>
+            <section class="page">
+                <h2>Folder Structure</h2>
+                <ul class="folder-structure">
+                    <li class="folder">
+                        <a href="">assets</a>
+                        <ul class="folder-structure">
+                            <li class="folder">
+                                <a href="">audio</a>
+                            </li>
+                            <li class="folder">
+                                <a href="">sprites</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="folder">
+                        <a href="">css</a>
+                        <ul class="folder-structure">
+                            <li class="file">
+                                <a href="">bootstrap.min.css</a>
+                            </li>
+                            <li class="file">
+                                <a href="">font-awesome.min.css</a>
+                            </li>
+                            <li class="file">
+                                <a href="">style.css</a>
+                            </li>
+                            <li class="file">
+                                <a href="">style.scss</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="folder">
+                        <a href="">fonts</a>
+                    </li>
+                    <li class="folder">
+                        <a href="">images</a>
+                    </li>
+                    <li class="folder">
+                        <a href="">js</a>
+                        <ul class="folder-structure">
+                            <li class="folder">
+                                <a href="">game</a>
+                                <ul class="folder-structure">
+                                    <li class="folder">
+                                        <a href="">core</a>
+                                        <ul class="folder-structure">
+                                            <li class="folder">
+                                                <a href="">Nodes</a>
+                                                <ul class="folder-structure">
+                                                    <li class="folder">
+                                                        <a href="">Control</a>
+                                                        <ul class="folder-structure">
+                                                            <li class="file">
+                                                                <a href="">BoxContainer.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">ColorRect.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">Container.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">ImageNumber.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">Label.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">LoadingBar.js</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="folder">
+                                                        <a href="">Node2D</a>
+                                                        <ul class="folder-structure">
+                                                            <li class="file">
+                                                                <a href="">AnimatedSprite2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">Area2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">CharacterBody2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">CollisionObject2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">CollisionShape2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">Sprite2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">StaticBody2D.js</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="folder">
+                                                        <a href="">Others</a>
+                                                        <ul class="folder-structure">
+                                                            <li class="file">
+                                                                <a href="">AudioStreamPlayer.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">Camera2D.js</a>
+                                                            </li>
+                                                            <li class="file">
+                                                                <a href="">SoundPlayer.js</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="file">
+                                                        <a href="">CNodes.js</a>
+                                                    </li>
+                                                    <li class="file">
+                                                        <a href="">Control.js</a>
+                                                    </li>
+                                                    <li class="file">
+                                                        <a href="">Node2D.js</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="file">
+                                                <a href="">App.js</a>
+                                            </li>
+                                            <li class="file">
+                                                <a href="">Loader.js</a>
+                                            </li>
+                                            <li class="file">
+                                                <a href="">Scene.js</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="folder">
+                                        <a href="">scenes</a>
+                                        <ul class="folder-structure">
+                                            <li class="file">
+                                                <a href="">__PreloadAssets.js</a>
+                                            </li>
+                                            <li class="file">
+                                                <a href="">GameScene.js</a>
+                                            </li>
+                                        </ul>       
+                                    </li>
+                                    <li class="folder">
+                                        <a href="">scripts</a>
+                                        <ul class="folder-structure">
+                                            <li class="file">
+                                                <a href="">FlappyBirdCharacter.js</a>
+                                            </li>
+                                            <li class="file">
+                                                <a href="">Pipe2D.js</a>
+                                            </li>
+                                            <li class="file">
+                                                <a href="">Pipe2DGenerator.js</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="file">
+                                        <a href="">bootstrap.js</a>
+                                    </li>
+                                    <li class="file">
+                                        <a href="">index.js</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="file">
+                                <a href="">bootstrap.bundle.min.js</a>
+                            </li>
+                            <li class="file">
+                                <a href="">jquery-3.7.1.min.js</a>
+                            </li>
+                            <li class="file">
+                                <a href="">jquery.slim.min.js</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="file">
+                        <a href="">index.php</a>
+                    </li>
+                    <li class="file">
+                        <a href="">ReadMe.html</a>
+                    </li>
+                    <li class="file">
+                        <a href="">resources.json</a>
+                    </li>
+                </ul>
+            </section>
+            <section class="page">
+                <h2>Detailed Explanation:</h2>
+                <h3 id="index_php">index.php</h3>
+                <p>Starting point - index page.</p>
+                <p>
+                    Here we have the css files and js files and other stuff
+                </p>
+                <hr/>
+                <h3 id="index_js">index.js</h3>
+                <p>Script starting point</p>
+                <p>
+                    Function onLoad initializes the Canvas and runs the app. Plus some other functions for handling keyboard and mouse addEventListener
+                </p>
+                <code class="jush-js">
+function onLoad(){
+    window.flyingDebugger = document.getElementById('flyingDebugger')
+    
+    const ctx = initCanvas();
+    const options = getOptions();
+    if(!ctx)
+        return;
+    const App = bootstrap(ctx,options);
+    App.run();
+}                    
+                </code>
+                <hr/>
+                <h3 id="bootstrap_js">bootstrap.js</h3>
+                <p>
+                    Creates an instance of the app with desired configs and options
+                </p>
+                <hr/>
+                <h3 id="App_js">App.js</h3>
+                <p>
+                    This is the backbone of our app. It handles game state. It handles scene changes. It broadcasts keyboard and mouse events to any subscribers, ...
+                </p>
+                <p>
+                    App run
+                </p>
+                <code class="jush-js">
+run = async function(){
+    const data = await jQuery.getJSON(this.options.resourcePath);
+    window.resources = data;
+    if(data && data.assets && data.scenes){
+        this.props.Scenes = data.scenes;
+        // this.loadScene(this.getStartingSceneName());
+        console.log('app running');
+        this.__preloadAssets();
+        console.log('app finished running');
+    }else{
+        console.log('error loading resources list');
+    }
+}                        
+                </code>
+            </section>
+            <section class="page">
+                <p>
+                    getInstance is used by bootstrap.js
+                </p>
+                <code class="jush-js">
+static getInstance = function(ctx, options){
+    const props = {
+        Scenes: {},
+        __startingSceneName: 'GameScene',
+        __currentScene: null,
+        resourcePath: '/resources.json'
+    }
+    const loader = new Loader(props.resourcePath);
+    const app = new App({
+        loader,
+        options,
+        ctx,
+        props
+    });
+    return app;
+}                    
+                </code>
+                <p>
+                    loadScene handles changing scenes and running a scene
+                </p>
+                <code class="jush-js">
+loadScene = function(sceneName){
+    console.log('loading Scene: '+ sceneName)
+    if(this.getCurrentScene()){
+        console.log('first unload current scene:', this.getCurrentScene())
+        this.getCurrentScene().unload();
+    }
+    window.setTimeout(()=>{
+        if(this.setCurrentScene(sceneName)){
+            console.log('setting cur scene: ' + sceneName)
+            this.getCurrentScene().load();
+            // this.setCurrentScene(sceneName);
+            this.getCurrentScene().run();
+        }else{
+            console.log('eeee')
+        }
+    },300)
+}
+                </code>
+                <hr/>
+                <h3 id="Loader_js">Loader.js</h3>
+                <p>
+                    Handles assets preloading (audio and sprites) and we can subscribe to it to get status of the assets preloading
+                </p>
+                <hr/>
+                <h3 id="Scene_js">Scene.js</h3>
+                <p>Extends from `<a href="#Node2D_js">Node2D</a>`</p>
+            </section>
+            <section class="page">
+                <p>
+                    Base Class for game scenes. <b>This is responsible for handling game loops</b>. It has "process loop" and "physical loop" and "draw loop" and it also runs loops of children objects of the scene
+                </p>
+                <p>
+                    loop handles physics loops (using intervals). (physics loops should be used for collision detection or doing advanced physics or game logics which are not directly related to draw. reason why we have separated them is to increase performance)
+                </p>
+                <code class="jush-js">
+loop(){
+    const pdelta = 1000/window.app.options.physicsFPS;
+    console.log('is looping', pdelta)
+    window.tm1 = setInterval(() => {
+        // console.log('e2', window.last_time);
+        let delta2 = 0;
+        if(window.last_time2 == null || window.last_time2 == undefined || window.last_time2== -1){
+            if(window.last_time == null || window.last_time == undefined || window.last_time == -1)
+                return false;
+            window.last_time2 = window.last_time
+        }else{
+            const tmpdelta = window.last_time-window.last_time2
+            if(tmpdelta>0 || tmpdelta<1000)
+                delta2=tmpdelta
+            window.last_time2 = window.last_time
+        }
+        // console.log('running physics process delta:' + delta2 + ' fps:' + 1000/delta2 + ' pdelta:' + pdelta)
+        if(!this.isRunning()){
+            console.log('is not running')
+            clearInterval(window.tm1); 
+        }else{
+            // console.log('is running')
+        }
+        this.runPhysicalProcesses(pdelta/1000);
+        // this.getPhysicsProcesses().forEach(fn => {
+        //     fn();
+        // });
+    }, pdelta);
+
+    this.process_loop();
+}
+                </code>
+                <p>
+                    process loop handles "process loops" and "draw loops". (process loops happen before drawing elements to prepare them and draw loops are for drawing elements on canvas which is written in core and we should not add our own draw functions unless we know what we are doing!)
+                </p>
+            </section>
+            <section class="page">
+                <code class="jush-js">
+process_loop(e){
+    // console.log('process loop', this)
+    let delta = 0;
+    if(window.last_time2 == null || window.last_time2 == undefined || window.last_time2== -1){
+        window.last_time = e
+    }else{
+        const tmpdelta = e-window.last_time
+        if(tmpdelta>0 || tmpdelta<1000)
+            delta=tmpdelta
+        window.last_time = e
+    }
+// console.log('running animation loop delta:' + delta + ' fps:'+1000/delta);
+    this.runProcesses(delta);
+    this.runDraws(delta);
+    // this.getProcesses().forEach(fn => {
+    //     fn();
+    // });
+    // this.getDraws().forEach(fn => {
+    //     fn();
+    // });
+    if(this.isRunning()){
+        // console.log('is running')
+        requestAnimationFrame(this.process_loop);
+    }else{
+        console.log('is not running 2')
+    }
+}                
+                </code>
+                <hr/>
+                <h3 id="CNode_js">CNode.js</h3>
+                <p>
+                    <b>Base class for all objects.</b> So basically evey object including Scene either directly or directly inherits from this class.</b>
+                </p>
+                <p>
+                    it handles things like child initialization (turning childrenJSON into children Objects). defines methods for loops and object lifecycles like "init" "ready" "process" , ... . Handles loops events of objects. calculates positions and dimensions of object. "getChild", "getParentNode", ...
+                </p>
+                <p>
+                    basically everything that we want an object to be able to do. if we want to create our own customized object its enough to extend from this class or a class that inherits from this class and it will do the magic.
+                </p>
+                <p>Some of methods defined in this class:</p>
+            </section>
+            <section class="page">
+                <code class="jush-js">
+this.runInits               = this.runInits.bind(this)
+this.runReadys              = this.runReadys.bind(this)
+this.runPhysicalProcesses   = this.runPhysicalProcesses.bind(this)
+this.runProcesses           = this.runProcesses.bind(this)
+this.runDraws               = this.runDraws.bind(this)
+this.getParentNode          = this.getParentNode.bind(this)
+this.hasParentNode          = this.hasParentNode.bind(this)
+this.setParentNode          = this.setParentNode.bind(this)
+this.getEffectiveWidth      = this.getEffectiveWidth.bind(this)
+this.getEffectiveHeight     = this.getEffectiveHeight.bind(this)
+this.getEffectivePosition   = this.getEffectivePosition.bind(this)
+this.getChild               = this.getChild.bind(this);
+this.isRunning              = this.isRunning.bind(this);
+this._setIsRunning          = this._setIsRunning.bind(this);
+
+this._init = this._init.bind(this)
+this._ready = this._ready.bind(this)
+this._physicalProcess = this._physicalProcess.bind(this)
+this._process = this._process.bind(this)
+this._ready = this._ready.bind(this)
+this._draw = this._draw.bind(this)
+this.getParentScene = this.getParentScene.bind(this)            
+                </code>
+                <hr/>
+                <h3 id="Control_js">Control.js</h3>
+                <p>
+                    Extends from `<a href="#CNode_js">CNode.js</a>`.
+                </p>
+                <p>
+                    Base class for UI related objects. Like `<a href="#Label_js">Label.js</a>`
+                </p>
+                <hr/>
+                <h3 id="Node2D_js">Node2D.js</h3>
+                <p>
+                    Extends from `<a href="#CNode_js">CNode.js</a>`.
+                </p>
+                <p>
+                    Base class for 2D objects being drawn on canvas. things that are game related and not just UI. Like `<a href="#Sprite2D_js">Sprite2D.js</a>`
+                </p>
+                <hr/>
+                <h3 id="BoxContainer_js">BoxContainer.js</h3>
+                <p>
+                    Extends from `<a href="#Control_js">Control.js</a>`.
+                </p>
+                <p>
+                    Draws a box with round corners and given properties.(can be used as container too. all Nodes can be used as container containing multiple children)
+                </p>
+                <hr/>
+                <h3 id="ColorRect_js">ColorRect.js</h3>
+                <p>
+                    Extends from `<a href="#Control_js">Control.js</a>`.
+                </p>
+                <p>
+                    Draws a rect with given size, position and Color.
+                </p>
+                <hr/>
+            </section>
+            <section class="page">
+                <h3 id="Container_js">Container.js</h3>
+                <p>
+                    Extends from `<a href="#Control_js">Control.js</a>`.
+                </p>
+                <p>
+                    Used as wrapper for UI elements. (provides relative positioning for its children. basically all elements provide relative positioning for their children. so this element does nothing more)
+                </p>
+                <hr/>
+                <h3 id="ImageNumber_js">ImageNumber.js</h3>
+                <p>
+                    Extends from `<a href="#Control_js">Control.js</a>`.
+                </p>
+                <p>
+                    Draws an integer number using Image digits
+                </p>
+                <hr/>
+                <h3 id="Label_js">Label.js</h3>
+                <p>
+                    Extends from `<a href="#Control_js">Control.js</a>`.
+                </p>
+                <p>
+                    Draws a text in a given position with given properties.
+                </p>
+                <hr/>
+                <h3 id="LoadingBar_js">LoadingBar.js</h3>
+                <p>
+                    Extends from `<a href="#Control_js">Control.js</a>`.
+                </p>
+                <p>
+                    A complex object which had multiple of simple objects which is in the core of the game engine and provide loading bar feature.
+                </p>
+                <hr/>
+                <h3 id="AnimatedSprite2D_js">AnimatedSprite2D.js</h3>
+                <p>
+                    Extends from `<a href="#Node2D_js">Node2D.js</a>`.
+                </p>
+                <p>
+                    NOT IMPLEMENTED!
+                </p>
+                <hr/>
+                <h3 id="Area2D_js">Area2D.js</h3>
+                <p>
+                    Extends from `<a href="#CollisionObject2D_js">CollisionObject2D.js</a>`.
+                </p>
+                <p>
+                    Defines a 2D area (rectangle). Used in Collision detection. Basically used when we want to detect an object passing through an area without actually colliding with it.
+                </p>
+                <hr/>
+                <h3 id="CharacterBody2D_js">CharacterBody2D.js</h3>
+                <p>
+                    Extends from `<a href="#CollisionObject2D_js">CollisionObject2D.js</a>`.
+                </p>
+                <p>
+                    A type of object that supports collision and can move. Like a character
+                </p>
+                <hr/>
+                <h3 id="CollisionObject2D_js">CollisionObject2D.js</h3>
+                <p>
+                    Extends from `<a href="#Node2D_js">Node2D.js</a>`.
+                </p>
+                <p>
+                    Base class used for collision detection. provides collision detection. keeps track of all collidable objects
+                </p>
+            </section>
+            <section class="page">
+                <p> these are used for storing collidable objects</p>
+                <code class="jush-js">
+static registerCollision(collision){
+    let uuid = generateUUID();
+    collision.uuid = uuid;
+    // console.log('registering collision', collision)
+    CollisionObject2D._collisionObjects[uuid] = collision
+    return uuid;
+}
+
+static flushCollisions(){
+    CollisionObject2D._collisionObjects = {}
+}                
+                </code>
+                <p>
+                    checks collision of given object with all collidable objects: (and based on type of collision defines what should be the reaction of colliding objects)
+                </p>
+                <code class="jush-js">
+static detectCollisions(collisionObject){
+    let collisionShapes = collisionObject.getCollisionShapes()
+    let collisionResults = null;
+    if(
+        collisionShapes == undefined ||
+        collisionShapes == null  ||
+        !Array.isArray(collisionShapes) ||
+        collisionShapes.length<=0
+    ){
+        return null;
+    }
+    for (const collisionObject2 of Object.keys(CollisionObject2D._collisionObjects)){
+        if(collisionObject.uuid == CollisionObject2D._collisionObjects[collisionObject2].uuid){ // an object always collides with itself so we skip it
+            continue;
+        }
+        let collisionShapes2 = CollisionObject2D._collisionObjects[collisionObject2].getCollisionShapes();
+        // console.log('colobj2', CollisionObject2D._collisionObjects[collisionObject2],collisionShapes2)
+        if(
+            collisionShapes2 == undefined ||
+            collisionShapes2 == null  ||
+            !Array.isArray(collisionShapes2) ||
+            collisionShapes2.length<=0
+        ){
+            continue;
+        }
+        if(CollisionObject2D._collisionObjects[collisionObject2] instanceof Area2D){
+            // console.log(CollisionObject2D._collisionObjects[collisionObject2], 'Area2D',collisionShapes2)
+            collisionShapes2[0].collisionType = CollisionObject2D.COLLISION_TYPES.COLLISION_AREA
+        }else if(CollisionObject2D._collisionObjects[collisionObject2] instanceof StaticBody2D){
+            // console.log(CollisionObject2D._collisionObjects[collisionObject2], 'StaticBody2D',collisionShapes2)
+            collisionShapes2[0].collisionType = CollisionObject2D.COLLISION_TYPES.COLLISION_STATIC
+        }else{
+            console.error(collisionObject2,collisionShapes2);
+        }
+        // console.log('colsh 2', collisionShapes2)
+        collisionResults = CollisionObject2D._detectCollision(collisionShapes[0],collisionShapes2[0])
+        if(collisionResults != undefined && collisionResults != null){
+            break;
+        }
+    }
+    return collisionResults;
+}                
+                </code>
+            </section>
+            <section class="page">
+                <p>
+                    check if 2 given collidable objects are having a collision (and based on type of objects defines what should be the result of collision)
+                </p>
+                <code class="jush-js">
+static _detectCollision(collisionShape1, collisionShape2){
+    let collisionResult = null;
+    // console.log('col shape 2, collisionobjects', collisionShape2, CollisionObject2D._collisionObjects)
+    if(
+        collisionShape1.getEffectivePosition().X + collisionShape1.getEffectiveWidth() 
+        > collisionShape2.getEffectivePosition().X &&
+        collisionShape2.getEffectivePosition().X + collisionShape2.getEffectiveWidth() 
+        > collisionShape1.getEffectivePosition().X &&
+        collisionShape1.getEffectivePosition().Y + collisionShape1.getEffectiveHeight()
+        > collisionShape2.getEffectivePosition().Y &&
+        collisionShape2.getEffectivePosition().Y + collisionShape2.getEffectiveHeight() 
+        > collisionShape1.getEffectivePosition().Y
+    ){
+        if(collisionShape2.collisionType == CollisionObject2D.COLLISION_TYPES.COLLISION_STATIC){
+            collisionResult={velocity:{X:0, Y: 0}}
+            // console.log('colres 1111', collisionResult)
+        }else if(collisionShape2.collisionType == CollisionObject2D.COLLISION_TYPES.COLLISION_AREA){
+            collisionResult={}
+            // console.log('colres 2222', collisionResult)
+        }else{
+            console.error('colres 3', collisionShape2, collisionShape2.collisionType)
+        }
+    }
+    return collisionResult
+}                
+                </code>
+                <hr/>
+                <h3 id="CollisionShape2D_js">CollisionShape2D.js</h3>
+                <p>
+                    Extends from `<a href="#Node2D_js">Node2D.js</a>`.
+                </p>
+                <p>
+                    Defines collision area (a rect). This is used by `<a href="#Area2D_js">Area2D.js</a>`, `<a href="#CharacterBody2D_js">CharacterBody2D.js</a>`, `<a href="#StaticBody2D_js">StaticBody2D.js</a>` to define collision area(s). On init registers its parent to collidable objects list.
+                </p>
+                <code class="jush-js">
+_init(){
+    const parentNode = this.getParentNode()
+    CollisionObject2D.registerCollision(parentNode, this)
+}
+                </code>
+                <hr/>
+                <h3 id="Sprite2D_js">Sprite2D.js</h3>
+                <p>
+                    Extends from `<a href="#Node2D_js">Node2D.js</a>`.
+                </p>
+            </section>
+            <section class="page">
+                <p>
+                    Draws an sprite on canvas using given properties. Supported properties:
+                </p>
+                <code class="jush-js">
+const defaultProperties={
+    origin:{
+        X:0 ,
+        Y:0
+    },
+    position:{
+        X:0,
+        Y:0
+    },
+    offset:{
+        X:0,
+        Y:0
+    },
+    offset2:{
+        X:0,
+        Y:0
+    },
+    destinationOffset:{
+        X:0,
+        Y:0
+    },
+    repeat: 'no',
+    scale: 1, 
+    scaleMode:'stretch',
+    width:'auto',
+    height: 'auto',
+    rotation: 0,
+    positionMode: 'relative'
+}            
+                </code>
+                <hr/>
+                <h3 id="StaticBody2D_js">StaticBody2D.js</h3>
+                <p>
+                    Extends from `<a href="#Node2D_js">Node2D.js</a>`.
+                </p>
+                <p>
+                    Defines collidable object that is static and cannot move (like walls, ground, etc)
+                </p>
+                <hr/>
+                <h3 id="AudioStreamPlayer_js">AudioStreamPlayer.js</h3>
+                <p>
+                    Extends from `<a href="#CNode_js">CNode.js</a>`.
+                </p>
+                <p>
+                    Plays music. can loop, auto play, stop, resume
+                </p>
+                <hr/>
+                <h3 id="Camera2D_js">Camera2D.js</h3>
+                <p>
+                    Extends from `<a href="#CNode_js">CNode.js</a>`.
+                </p>
+            </section>
+            <section class="page">
+                <p>
+                    Defines camera2D. properties defines:
+                </p>
+                <code class="jush-js">
+const defaultProperties={
+    position:{
+        X:240,
+        Y:320
+    },
+    origin:{
+        X: 0.5,
+        Y: 0.5
+    },
+    viewWidth: 480,
+    viewHeight: 640,
+    showCameraRect: true,
+    default: false
+}            
+                </code>
+                <p>
+                    the camera itself does not do much but others will use its properties to adjust themselves or scene can change position of camera based on game logic etc
+                </p>
+                <hr/>
+                <h3 id="SoundPlayer_js">SoundPlayer.js</h3>
+                <p>
+                    Extends from `<a href="#CNode_js">CNode.js</a>`.
+                </p>
+                <p>
+                    Plays a sound. (used for short sounds and sfx)
+                </p>
+                <hr/>
+
+<!-- 
+                <h3 id="_js">.js</h3>
+                <p>
+                    Extends from `<a href="#Node2D_js">Node2D.js</a>`.
+                </p>
+                <p>
+                    empty
+                </p>
+                <hr/>
+ -->
+                <p>
+                    <b>The game engine needs a lot of work in terms of optimization and code refactoring before its ready to be used in real projects.</b>
+                </p>
+                <h4>Thanks for reading</h4>
+            </section>
+        </main>
+    </div>
+    <script type="text/javascript"></script>
+    <script>
+        let elems;
+        elems = document.getElementsByClassName('folder');
+        Array.from(elems).forEach(elem => {
+            const iconObj = document.createElement('span');
+            iconObj.setAttribute('class', 'folder-icon')
+            elem.prepend(iconObj)
+            // console.log(elem)
+        })
+        elems = document.getElementsByClassName('file');
+        Array.from(elems).forEach(elem => {
+            const iconObj = document.createElement('span');
+            iconObj.setAttribute('class', 'file-icon')
+            elem.prepend(iconObj)
+            // console.log(elem)
+        })
+        document.addEventListener('DOMContentLoaded', function(){
+            const pages = document.getElementsByClassName('page')
+            Array.from(pages).forEach(page => {//here we add some styles to text by replacing qouted texts
+                page.querySelectorAll('p').forEach(p => {
+                    const replacedP = replaceQuotes(p)
+                    page.replaceChild(replacedP, p)
+                })
+            })
+
+            let i=1;
+            Array.from(pages).forEach(page => {
+                const tmpObj = document.createElement('div')
+                tmpObj.style.position = 'absolute';
+                tmpObj.style.top='0'
+                tmpObj.style.left='48%'
+                tmpObj.style.width= '100%';
+
+                const tmpObj2 = document.createElement('span')
+                tmpObj2.innerText = i
+
+                tmpObj.append(tmpObj2)
+                page.prepend(tmpObj)
+                i++;
+            })
+            jush.highlight_tag('code');// highlights codes
+        })
+
+        function replaceQuotes(el){
+            let elContent = el.innerHTML
+            regexp = /`([^`]*)`/g
+            if(regexp.test(elContent)){
+                elContent = elContent.replace(regexp, (match, p1)=>{
+                    return '<span class="inline-code">' + p1 + '</span>'
+                })
+            }
+            el.innerHTML = elContent
+            return el;
+        }
+    </script>
+    <script type="text/javascript" src="/js/jush.js"></script>
+</body>
+</html>
